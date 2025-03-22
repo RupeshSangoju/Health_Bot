@@ -1,0 +1,7 @@
+[build]
+  publish = "build"
+  command = "npm run build"
+  functions = "functions"
+
+[functions]
+  python_version = "3.11"

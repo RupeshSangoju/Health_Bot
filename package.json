@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "axios": "^1.8.1",
+    "firebase": "^11.4.0",
+    "framer-motion": "^12.4.7",
+    "jspdf": "^3.0.1"
+  },
+  "name": "health-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
