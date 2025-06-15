@@ -3,7 +3,7 @@ const { Groq } = require("groq-sdk");
 const gTTS = require("gtts");
 const fs = require("fs").promises;
 const path = require("path");
-const { pipeline } = require("@huggingface/node-huggingface");
+const { pipeline } = require("@xenova/transformers"); // Correct import
 
 const healthTips = require("./health_tips.json");
 const groqClient = new Groq({ apiKey: process.env.GROQ_API_KEY });
