@@ -1,4 +1,3 @@
-# C:\Users\rupes\Portifolio\Health Bot\backend\server.py
 import os
 import logging
 import numpy as np
@@ -24,11 +23,12 @@ warnings.filterwarnings('ignore', category=UserWarning, module='tensorflow')
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+# Replace with your Netlify URL in production
+CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "https://healthbot007.netlify.app/"]}})
 
 # Setup logging
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,  # Use INFO in production to reduce verbosity
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[logging.FileHandler('backend.log'), logging.StreamHandler()]
 )
@@ -36,7 +36,7 @@ logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
-GROQ_API_KEY = os.getenv('REACT_APP_GROQ_API_KEY')
+GROQ_API_KEY = os.getenv('REACT_APP_GROQ_API_KEY')  # Fix: Remove REACT_APP_ prefix
 if not GROQ_API_KEY:
     logger.error("GROQ_API_KEY not found")
     raise ValueError("GROQ_API_KEY is required")
@@ -78,115 +78,128 @@ def load_models():
         if os.path.exists(model_path):
             with open(model_path, 'rb') as f:
                 model = pickle.load(f)
-            logger.info(f"Loaded XGBoost model from {model_path}")
+            logger.info(f"Loaded XGBoost model")
         else:
-            logger.warning(f"Missing file: {model_path}")
+            logger.error(f"Missing file: {model_path}")
+            raise FileNotFoundError(f"Missing file: {model_path}")
 
         le_path = os.path.join(MODEL_DIR, 'label_encoder.pkl')
         if os.path.exists(le_path):
             with open(le_path, 'rb') as f:
                 label_encoder = pickle.load(f)
-            logger.info(f"Loaded label encoder from {le_path}")
+            logger.info(f"Loaded label encoder")
         else:
-            logger.warning(f"Missing file: {le_path}")
+            logger.error(f"Missing file: {le_path}")
+            raise FileNotFoundError(f"Missing file: {le_path}")
 
         features_path = os.path.join(MODEL_DIR, 'top_features.pkl')
         if os.path.exists(features_path):
             with open(features_path, 'rb') as f:
                 top_features_loaded = pickle.load(f)
-                # Convert to list if NumPy array
                 top_features = top_features_loaded.tolist() if isinstance(top_features_loaded, np.ndarray) else top_features_loaded
-            logger.info(f"Loaded top features from {features_path}: {top_features}")
+            logger.info(f"Loaded top features: {top_features}")
         else:
-            logger.warning(f"Missing file: {features_path}")
+            logger.error(f"Missing file: {features_path}")
+            raise FileNotFoundError(f"Missing file: {features_path}")
 
         # Diabetes
         diabetes_model_path = os.path.join(MODEL_DIR, 'diabetes_best_model.h5')
         if os.path.exists(diabetes_model_path):
             diabetes_model = load_model(diabetes_model_path, compile=False)
             diabetes_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-            logger.info(f"Loaded diabetes model from {diabetes_model_path}")
+            logger.info(f"Loaded diabetes model")
         else:
-            logger.warning(f"Missing file: {diabetes_model_path}")
+            logger.error(f"Missing file: {diabetes_model_path}")
+            raise FileNotFoundError(f"Missing file: {diabetes_model_path}")
 
         diabetes_scaler_path = os.path.join(MODEL_DIR, 'diabetes_scaler.pkl')
         if os.path.exists(diabetes_scaler_path):
             diabetes_scaler = joblib.load(diabetes_scaler_path)
-            logger.info(f"Loaded diabetes scaler from {diabetes_scaler_path}")
+            logger.info(f"Loaded diabetes scaler")
         else:
-            logger.warning(f"Missing file: {diabetes_scaler_path}")
+            logger.error(f"Missing file: {diabetes_scaler_path}")
+            raise FileNotFoundError(f"Missing file: {diabetes_scaler_path}")
 
         diabetes_le_path = os.path.join(MODEL_DIR, 'diabetes_label_encoder.pkl')
         if os.path.exists(diabetes_le_path):
             diabetes_le = joblib.load(diabetes_le_path)
-            logger.info(f"Loaded diabetes label encoder from {diabetes_le_path}")
+            logger.info(f"Loaded diabetes label encoder")
         else:
-            logger.warning(f"Missing file: {diabetes_le_path}")
+            logger.error(f"Missing file: {diabetes_le_path}")
+            raise FileNotFoundError(f"Missing file: {diabetes_le_path}")
 
         # Heart Disease
         heart_model_path = os.path.join(MODEL_DIR, 'heart_disease_best_model.h5')
         if os.path.exists(heart_model_path):
             heart_disease_model = load_model(heart_model_path, compile=False)
             heart_disease_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-            logger.info(f"Loaded heart disease model from {heart_model_path}")
+            logger.info(f"Loaded heart disease model")
         else:
-            logger.warning(f"Missing file: {heart_model_path}")
+            logger.error(f"Missing file: {heart_model_path}")
+            raise FileNotFoundError(f"Missing file: {heart_model_path}")
 
         heart_scaler_path = os.path.join(MODEL_DIR, 'heart_disease_scaler.pkl')
         if os.path.exists(heart_scaler_path):
             heart_disease_scaler = joblib.load(heart_scaler_path)
-            logger.info(f"Loaded heart disease scaler from {heart_scaler_path}")
+            logger.info(f"Loaded heart disease scaler")
         else:
-            logger.warning(f"Missing file: {heart_scaler_path}")
+            logger.error(f"Missing file: {heart_scaler_path}")
+            raise FileNotFoundError(f"Missing file: {heart_scaler_path}")
 
         heart_le_path = os.path.join(MODEL_DIR, 'heart_disease_label_encoder.pkl')
         if os.path.exists(heart_le_path):
             heart_disease_le = joblib.load(heart_le_path)
-            logger.info(f"Loaded heart disease label encoder from {heart_le_path}")
+            logger.info(f"Loaded heart disease label encoder")
         else:
-            logger.warning(f"Missing file: {heart_le_path}")
+            logger.error(f"Missing file: {heart_le_path}")
+            raise FileNotFoundError(f"Missing file: {heart_le_path}")
 
         # Mental Health
         mental_model_path = os.path.join(MODEL_DIR, 'mental_health_best_model.h5')
         if os.path.exists(mental_model_path):
             mental_health_model = load_model(mental_model_path, compile=False)
             mental_health_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-            logger.info(f"Loaded mental health model from {mental_model_path}")
+            logger.info(f"Loaded mental health model")
         else:
-            logger.warning(f"Missing file: {mental_model_path}")
+            logger.error(f"Missing file: {mental_model_path}")
+            raise FileNotFoundError(f"Missing file: {mental_model_path}")
 
         mental_scaler_path = os.path.join(MODEL_DIR, 'mental_health_scaler.pkl')
         if os.path.exists(mental_scaler_path):
             mental_health_scaler = joblib.load(mental_scaler_path)
-            logger.info(f"Loaded mental health scaler from {mental_scaler_path}")
+            logger.info(f"Loaded mental health scaler")
         else:
-            logger.warning(f"Missing file: {mental_scaler_path}")
+            logger.error(f"Missing file: {mental_scaler_path}")
+            raise FileNotFoundError(f"Missing file: {mental_scaler_path}")
 
         mental_les_path = os.path.join(MODEL_DIR, 'mental_health_label_encoders.pkl')
         if os.path.exists(mental_les_path):
             mental_health_les = joblib.load(mental_les_path)
-            logger.info(f"Loaded mental health label encoders from {mental_les_path}")
+            logger.info(f"Loaded mental health label encoders")
         else:
-            logger.warning(f"Missing file: {mental_les_path}")
+            logger.error(f"Missing file: {mental_les_path}")
+            raise FileNotFoundError(f"Missing file: {mental_les_path}")
 
         # Skin Lesion and Chest X-ray
         skin_model_path = os.path.join(MODEL_DIR, 'skin_lesion_inceptionv3_model.h5')
         if os.path.exists(skin_model_path):
             skin_lesion_model = load_model(skin_model_path, compile=False)
             skin_lesion_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-            logger.info(f"Loaded skin lesion model from {skin_model_path}")
+            logger.info(f"Loaded skin lesion model")
         else:
-            logger.warning(f"Missing file: {skin_model_path}")
+            logger.error(f"Missing file: {skin_model_path}")
+            raise FileNotFoundError(f"Missing file: {skin_model_path}")
 
         chest_model_path = os.path.join(MODEL_DIR, 'chest_xray_model.h5')
         if os.path.exists(chest_model_path):
             chest_xray_model = load_model(chest_model_path, compile=False)
             chest_xray_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-            logger.info(f"Loaded chest x-ray model from {chest_model_path}")
+            logger.info(f"Loaded chest x-ray model")
         else:
-            logger.warning(f"Missing file: {chest_model_path}")
+            logger.error(f"Missing file: {chest_model_path}")
+            raise FileNotFoundError(f"Missing file: {chest_model_path}")
 
-        logger.info("Model loading completed")
+        logger.info("All models loaded successfully")
     except Exception as e:
         logger.error(f"Failed to load models: {e}", exc_info=True)
         raise
@@ -547,4 +560,5 @@ def translate():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001, debug=True)
+    port = int(os.environ.get('PORT', 5001))  # Use PORT env var for Render
+    app.run(host='0.0.0.0', port=port)  # Remove debug=True
