@@ -27,8 +27,8 @@ HealthBot is a **React-based** web application designed to provide personalized 
 
 ## 🚀 Live Demo
 
-- **Frontend**: [Insert Netlify URL, e.g., https://health-bot.netlify.app]
-- **Backend**: [Insert Render URL, e.g., https://health-bot-backend.onrender.com]
+- **Frontend**: [ https://healthbot007.netlify.app/]
+- **Backend**: [ https://health-bot-kg6i.onrender.com]
 
 ## 🛠️ Setup Instructions
 
@@ -41,13 +41,19 @@ HealthBot is a **React-based** web application designed to provide personalized 
 
 3. **Set Environment Variables**
    Create .env in the root
-    REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
-    REACT_APP_FIREBASE_AUTH_DOMAIN=health-bit-9ed05.firebaseapp.com
-    REACT_APP_FIREBASE_PROJECT_ID=health-bit-9ed05
-    REACT_APP_FIREBASE_STORAGE_BUCKET=health-bit-9ed05.firebasestorage.app
-    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-    REACT_APP_FIREBASE_APP_ID=your_app_id
-    REACT_APP_GROQ_API_KEY=your_groq_api_key
+    REACT_APP_FIREBASE_API_KEY
+
+    REACT_APP_FIREBASE_AUTH_DOMAIN
+    
+    REACT_APP_FIREBASE_PROJECT_ID
+
+    REACT_APP_FIREBASE_STORAGE_BUCKET
+
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID
+
+    REACT_APP_FIREBASE_APP_ID
+
+    REACT_APP_GROQ_API_KEY
 
 4. **Run Locally**
     npm start
@@ -67,16 +73,22 @@ This is the Flask backend for **HealthBot**, an AI-powered health assistant. It 
 
 ## Setup
 1. **Clone the repository**
+
    git clone https://github.com/RupeshSangoju/health-bot-backend
+
    cd health-bot-backend
 
 2. **Install dependencies**
+
     pip install -r requirements.txt
 
+
 3. **Set environment variables in .env**
+
     GROQ_API_KEY=your_groq_api_key
 
 4. **Run locally**
+
     python server.py
 
     Access at http://localhost:5001/health
@@ -84,23 +96,34 @@ This is the Flask backend for **HealthBot**, an AI-powered health assistant. It 
 ## Deployment
 
 **Render**
+
 Deployed with render.yaml using gunicorn -w 2 --timeout 120 --bind 0.0.0.0:$PORT server:app
 
+
 **Git LFS**
+
 Large model files (.h5, .pkl, .tflite) are tracked with Git LFS.
 
+
 **Environment Variables**
+
 Set GROQ_API_KEY and PYTHON_VERSION=3.10.12 in Render Dashboard.
 
+
 **Health Check**
+
 /health endpoint ensures uptime
+
 
 ## Optimization
 
 **Lazy Loading** 
+
 Lazy Loading
 
+
 **Model Compression**
+
 .h5 models quantized to .tflite, .pkl files compressed with joblib.
 
 #  Contributing
