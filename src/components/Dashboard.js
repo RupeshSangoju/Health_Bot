@@ -46,6 +46,7 @@ function Dashboard({ user }) {
 
   // Firebase data fetching
   useEffect(() => {
+    const today = new Date().toDateString();
     const userDocRef = doc(db, 'users', user.uid);
     const unsubscribeUser = onSnapshot(userDocRef, (docSnap) => {
       if (docSnap.exists()) {

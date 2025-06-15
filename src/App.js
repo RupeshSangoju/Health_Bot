@@ -8,14 +8,13 @@ import RegisterPage from './components/RegisterPage';
 import Dashboard from './components/Dashboard';
 import './App.css';
 import './il8n';
-import { useTranslation } from 'react-i18next';
+
 
 function App() {
   const [user, setUser] = useState(null);
   const [isAuthLoading, setIsAuthLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
-  const {i18n} = useTranslation();
-
+  
   useEffect(() => {
     console.log('App mounted, checking auth state...');
     if (process.env.NODE_ENV === 'development') {
@@ -74,9 +73,7 @@ function App() {
     }
   };
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+
 
   if (isAuthLoading) {
     return (

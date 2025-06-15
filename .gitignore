@@ -2,5 +2,5 @@
 .env
 node_modules
 build/
-/backend/backendlog/
-backendlog
+/backend/backend.log/
+backend.log
