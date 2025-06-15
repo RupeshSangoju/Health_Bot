@@ -5,7 +5,7 @@ const fs = require("fs").promises;
 const path = require("path");
 const { pipeline } = require("@xenova/transformers"); // Correct import
 
-const healthTips = require("./health_tips.json");
+const healthTips = require("../src/data/health_tips.json"); // Updated path
 const groqClient = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const sentimentAnalyzer = pipeline('sentiment-analysis', 'distilbert-base-uncased-finetuned-sst-2-english');
 
