@@ -33,6 +33,7 @@ function SettingsPanel({ darkMode, setDarkMode, onClose }) {
           className={`w-full p-2 border rounded-lg ${darkMode ? 'bg-gray-700 border-gray-600 text-white' : 'bg-white border-blue-200'}`}
         >
           <option value="en">English</option>
+          <option value="hi">Hindi</option>
           <option value="es">Spanish</option>
           <option value="fr">French</option>
           <option value="de">German</option>

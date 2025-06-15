@@ -11,6 +11,7 @@ const firebaseConfig = {
   storageBucket: "health-bit-9ed05.firebasestorage.app",
   messagingSenderId: "270028866454",
   appId: "1:270028866454:web:cdc68c8629811caf3313b7"
+
 };
 
 const app = initializeApp(firebaseConfig);

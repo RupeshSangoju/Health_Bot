@@ -20,3 +20,8 @@ body {
 .message {
   animation: fadeIn 0.3s ease-in;
 }
+/* src/index.css */
+input:focus {
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
+}

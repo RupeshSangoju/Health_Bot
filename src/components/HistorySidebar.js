@@ -2,7 +2,7 @@ import React from 'react';
 
 function HistorySidebar({ sessions, onLoadSession }) {
   return (
-    <div className="w-full md:w-1/4 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border dark:border-gray-700 border-blue-200">
+    <div className="w-full md:w-3/4 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border dark:border-gray-700 border-blue-200">
       <h2 className={`text-xl font-semibold mb-4 ${sessions.length ? 'text-blue-600 dark:text-blue-300' : 'text-gray-500 dark:text-gray-400'}`}>
         Chat History
       </h2>

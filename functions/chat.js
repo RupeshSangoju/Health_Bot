@@ -1,12 +1,13 @@
+// functions/chat.js
 const { Groq } = require("groq-sdk");
 const gTTS = require("gtts");
 const fs = require("fs").promises;
 const path = require("path");
+const { pipeline } = require("@huggingface/node-huggingface");
 
-// Load health tips
 const healthTips = require("./health_tips.json");
-
 const groqClient = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const sentimentAnalyzer = pipeline('sentiment-analysis', 'distilbert-base-uncased-finetuned-sst-2-english');
 
 async function analyzeVoice(audioData) {
   const tempAudioPath = path.join("/tmp", `audio-${Date.now()}.wav`);
@@ -31,7 +32,7 @@ async function getChatResponse(text, language = "en") {
   const response = await groqClient.chat.completions.create({
     model: "llama3-8b-8192",
     messages: [
-      { role: "system", content: `You are a health bot. Provide short, clear answers in ${language}.` },
+      { role: "system", content: `You are a compassionate virtual therapist. Provide empathetic, supportive responses in ${language}.` },
       { role: "user", content: text },
     ],
     temperature: 0.7,
@@ -41,7 +42,7 @@ async function getChatResponse(text, language = "en") {
   return response.choices[0].message.content;
 }
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 204,
@@ -108,4 +109,33 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ response_text: responseText }),
     };
   }
+};
+
+// Sentiment analysis function
+exports.sentiment = async (event) => {
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ error: "Method not allowed" }),
+    };
+  }
+
+  const data = JSON.parse(event.body);
+  if (!data || !data.text) {
+    return {
+      statusCode: 400,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ error: "No text provided" }),
+    };
+  }
+
+  const result = await sentimentAnalyzer(data.text);
+  const mood = result[0].label === 'POSITIVE' ? 3 : result[0].label === 'NEGATIVE' ? 1 : 2;
+
+  return {
+    statusCode: 200,
+    headers: { "Access-Control-Allow-Origin": "*" },
+    body: JSON.stringify({ mood }),
+  };
 };

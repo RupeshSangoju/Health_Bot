@@ -1,0 +1,310 @@
+2025-06-14 15:41:45,057 - ERROR - Failed to initialize Firebase: [Errno 2] No such file or directory: 'path/to/your/firebase-adminsdk.json'
+2025-06-14 15:48:48,503 - ERROR - Failed to load models: [Errno 2] Unable to synchronously open file (unable to open file: name = 'c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+2025-06-14 15:57:24,156 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 15:57:24,156 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 15:57:24,157 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 15:57:24,158 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 15:57:24,158 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 15:57:24,158 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 15:57:24,158 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 15:57:24,158 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 15:57:24,158 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 15:57:24,158 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 15:57:24,158 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 15:57:24,160 - INFO - Model loading completed
+2025-06-14 15:57:24,202 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.6:5001
+2025-06-14 15:57:24,202 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 15:57:24,205 - INFO -  * Restarting with stat
+2025-06-14 15:57:30,827 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 15:57:30,827 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 15:57:30,828 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 15:57:30,828 - INFO - Model loading completed
+2025-06-14 15:57:30,844 - WARNING -  * Debugger is active!
+2025-06-14 15:57:30,852 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 15:57:31,322 - INFO -  * Detected change in 'c:\\Users\\rupes\\Portifolio\\Health Bot\\backend\\server.py', reloading
+2025-06-14 15:57:31,960 - INFO -  * Restarting with stat
+2025-06-14 15:57:38,045 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 15:57:38,045 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 15:57:38,047 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 15:57:38,047 - INFO - Model loading completed
+2025-06-14 15:57:38,059 - WARNING -  * Debugger is active!
+2025-06-14 15:57:38,064 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 15:57:55,833 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 15:57:55,833 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 15:57:55,833 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 15:57:55,833 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 15:57:55,833 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 15:57:55,833 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 15:57:55,833 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 15:57:55,834 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 15:57:55,834 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 15:57:55,834 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 15:57:55,834 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 15:57:55,834 - INFO - Model loading completed
+2025-06-14 15:57:55,865 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.6:5001
+2025-06-14 15:57:55,865 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 15:57:55,867 - INFO -  * Restarting with stat
+2025-06-14 15:58:01,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 15:58:01,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 15:58:01,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 15:58:01,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 15:58:01,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 15:58:01,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 15:58:01,284 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 15:58:01,284 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 15:58:01,284 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 15:58:01,284 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 15:58:01,284 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 15:58:01,284 - INFO - Model loading completed
+2025-06-14 15:58:01,295 - WARNING -  * Debugger is active!
+2025-06-14 15:58:01,299 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 16:02:13,936 - INFO -  * Detected change in 'c:\\Users\\rupes\\Portifolio\\Health Bot\\backend\\server.py', reloading
+2025-06-14 16:02:14,762 - INFO -  * Restarting with stat
+2025-06-14 16:02:23,586 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 16:02:23,586 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 16:02:23,589 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 16:02:23,589 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 16:02:23,589 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 16:02:23,589 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 16:02:23,590 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 16:02:23,590 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 16:02:23,590 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 16:02:23,590 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 16:02:23,590 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 16:02:23,590 - INFO - Model loading completed
+2025-06-14 16:02:23,604 - WARNING -  * Debugger is active!
+2025-06-14 16:02:23,611 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 16:02:33,181 - INFO -  * Detected change in 'c:\\Users\\rupes\\Portifolio\\Health Bot\\backend\\server.py', reloading
+2025-06-14 16:02:33,973 - INFO -  * Restarting with stat
+2025-06-14 16:02:40,277 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 16:02:40,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 16:02:40,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 16:02:40,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 16:02:40,279 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 16:02:40,280 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 16:02:40,280 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 16:02:40,280 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 16:02:40,280 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 16:02:40,280 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 16:02:40,280 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 16:02:40,281 - INFO - Model loading completed
+2025-06-14 16:02:40,297 - WARNING -  * Debugger is active!
+2025-06-14 16:02:40,303 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 16:03:00,248 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 16:03:00,248 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 16:03:00,248 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 16:03:00,248 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 16:03:00,250 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 16:03:00,250 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 16:03:00,251 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 16:03:00,251 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 16:03:00,251 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 16:03:00,251 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 16:03:00,251 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 16:03:00,251 - INFO - Model loading completed
+2025-06-14 16:03:00,281 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.6:5001
+2025-06-14 16:03:00,283 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 16:03:00,286 - INFO -  * Restarting with stat
+2025-06-14 16:03:19,451 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 16:03:19,452 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 16:03:19,452 - INFO - Model loading completed
+2025-06-14 16:03:19,481 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.6:5001
+2025-06-14 16:03:19,481 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 16:03:19,483 - INFO -  * Restarting with stat
+2025-06-14 16:03:25,192 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 16:03:25,192 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 16:03:25,192 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 16:03:25,193 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 16:03:25,193 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 16:03:25,193 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 16:03:25,193 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 16:03:25,193 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 16:03:25,194 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 16:03:25,194 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 16:03:25,194 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 16:03:25,194 - INFO - Model loading completed
+2025-06-14 16:03:25,207 - WARNING -  * Debugger is active!
+2025-06-14 16:03:25,213 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 16:04:58,648 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\xgb_model_streamlined.pkl
+2025-06-14 16:04:58,648 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\label_encoder.pkl
+2025-06-14 16:04:58,648 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\top_features.pkl
+2025-06-14 16:04:58,717 - DEBUG - Creating converter from 3 to 5
+2025-06-14 16:04:58,981 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:04:59,152 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:04:59,249 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:05:00,864 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:05:01,082 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:05:01,090 - INFO - Model loading completed
+2025-06-14 16:05:01,119 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.6:5001
+2025-06-14 16:05:01,121 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 16:05:01,123 - INFO -  * Restarting with stat
+2025-06-14 16:05:06,379 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\xgb_model_streamlined.pkl
+2025-06-14 16:05:06,379 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\label_encoder.pkl
+2025-06-14 16:05:06,379 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\top_features.pkl
+2025-06-14 16:05:06,379 - DEBUG - Creating converter from 3 to 5
+2025-06-14 16:05:06,482 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:05:06,594 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:05:06,667 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:05:08,134 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:05:08,300 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-14 16:05:08,300 - INFO - Model loading completed
+2025-06-14 16:05:08,317 - WARNING -  * Debugger is active!
+2025-06-14 16:05:08,328 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 16:08:46,471 - INFO - 127.0.0.1 - - [14/Jun/2025 16:08:46] "OPTIONS /predict/mental_health HTTP/1.1" 200 -
+2025-06-14 16:08:47,145 - INFO - Mental health prediction: Low, confidence: 5.895880402547859e-15
+2025-06-14 16:08:47,145 - INFO - 127.0.0.1 - - [14/Jun/2025 16:08:47] "POST /predict/mental_health HTTP/1.1" 200 -
+2025-06-14 16:09:06,389 - INFO - 127.0.0.1 - - [14/Jun/2025 16:09:06] "OPTIONS /predict/heart_disease HTTP/1.1" 200 -
+2025-06-14 16:09:06,643 - ERROR - Heart disease prediction failed: could not convert string to float: 'Typical Angina'
+Traceback (most recent call last):
+  File "c:\Users\rupes\Portifolio\Health Bot\backend\server.py", line 252, in predict_heart_disease
+    chest_pain = heart_disease_le.transform([chest_pain])[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rupes\Portifolio\Health Bot\.venv\Lib\site-packages\sklearn\preprocessing\_label.py", line 129, in transform
+    y = column_or_1d(y, dtype=self.classes_.dtype, warn=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rupes\Portifolio\Health Bot\.venv\Lib\site-packages\sklearn\utils\validation.py", line 1454, in column_or_1d
+    y = check_array(
+        ^^^^^^^^^^^^
+  File "C:\Users\rupes\Portifolio\Health Bot\.venv\Lib\site-packages\sklearn\utils\validation.py", line 1053, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rupes\Portifolio\Health Bot\.venv\Lib\site-packages\sklearn\utils\_array_api.py", line 757, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Typical Angina'
+2025-06-14 16:09:06,740 - INFO - 127.0.0.1 - - [14/Jun/2025 16:09:06] "[35m[1mPOST /predict/heart_disease HTTP/1.1[0m" 500 -
+2025-06-14 16:09:41,544 - INFO - 127.0.0.1 - - [14/Jun/2025 16:09:41] "OPTIONS /predict/diabetes HTTP/1.1" 200 -
+2025-06-14 16:09:42,067 - INFO - Diabetes prediction: High, confidence: 0.5473461151123047
+2025-06-14 16:09:42,068 - INFO - 127.0.0.1 - - [14/Jun/2025 16:09:42] "POST /predict/diabetes HTTP/1.1" 200 -
+2025-06-14 16:09:48,877 - INFO - 127.0.0.1 - - [14/Jun/2025 16:09:48] "[35m[1mPOST /predict/disease HTTP/1.1[0m" 503 -
+2025-06-14 16:10:05,326 - INFO - 127.0.0.1 - - [14/Jun/2025 16:10:05] "OPTIONS /hospitals HTTP/1.1" 200 -
+2025-06-14 16:10:05,590 - DEBUG - Starting new HTTPS connection (1): overpass-api.de:443
+2025-06-14 16:10:06,744 - DEBUG - https://overpass-api.de:443 "GET /api/interpreter?data=%5Bout%3Ajson%5D%3Bnode%5B%22amenity%22%3D%22hospital%22%5D%28around%3A5000%2C17.3934%2C78.4706%29%3Bout+body%3B HTTP/1.1" 200 20712
+2025-06-14 16:10:07,068 - INFO - Found 226 hospitals
+2025-06-14 16:10:07,073 - INFO - 127.0.0.1 - - [14/Jun/2025 16:10:07] "POST /hospitals HTTP/1.1" 200 -
+2025-06-14 16:31:59,762 - INFO - 127.0.0.1 - - [14/Jun/2025 16:31:59] "OPTIONS /predict/disease HTTP/1.1" 200 -
+2025-06-14 16:32:00,008 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:00] "[35m[1mPOST /predict/disease HTTP/1.1[0m" 503 -
+2025-06-14 16:32:12,989 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:12] "OPTIONS /predict/diabetes HTTP/1.1" 200 -
+2025-06-14 16:32:13,738 - INFO - Diabetes prediction: High, confidence: 0.5473461151123047
+2025-06-14 16:32:13,738 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:13] "POST /predict/diabetes HTTP/1.1" 200 -
+2025-06-14 16:32:26,086 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:26] "OPTIONS /predict/heart_disease HTTP/1.1" 200 -
+2025-06-14 16:32:26,405 - ERROR - Heart disease prediction failed: could not convert string to float: 'Typical Angina'
+Traceback (most recent call last):
+  File "c:\Users\rupes\Portifolio\Health Bot\backend\server.py", line 252, in predict_heart_disease
+    chest_pain = heart_disease_le.transform([chest_pain])[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rupes\Portifolio\Health Bot\.venv\Lib\site-packages\sklearn\preprocessing\_label.py", line 129, in transform
+    y = column_or_1d(y, dtype=self.classes_.dtype, warn=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rupes\Portifolio\Health Bot\.venv\Lib\site-packages\sklearn\utils\validation.py", line 1454, in column_or_1d
+    y = check_array(
+        ^^^^^^^^^^^^
+  File "C:\Users\rupes\Portifolio\Health Bot\.venv\Lib\site-packages\sklearn\utils\validation.py", line 1053, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rupes\Portifolio\Health Bot\.venv\Lib\site-packages\sklearn\utils\_array_api.py", line 757, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Typical Angina'
+2025-06-14 16:32:26,421 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:26] "[35m[1mPOST /predict/heart_disease HTTP/1.1[0m" 500 -
+2025-06-14 16:32:33,968 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:33] "OPTIONS /predict/mental_health HTTP/1.1" 200 -
+2025-06-14 16:32:34,538 - INFO - Mental health prediction: Low, confidence: 5.895880402547859e-15
+2025-06-14 16:32:34,538 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:34] "POST /predict/mental_health HTTP/1.1" 200 -
+2025-06-14 16:32:49,851 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:49] "OPTIONS /hospitals HTTP/1.1" 200 -
+2025-06-14 16:32:50,171 - DEBUG - Starting new HTTPS connection (1): overpass-api.de:443
+2025-06-14 16:32:50,932 - DEBUG - https://overpass-api.de:443 "GET /api/interpreter?data=%5Bout%3Ajson%5D%3Bnode%5B%22amenity%22%3D%22hospital%22%5D%28around%3A5000%2C17.450802754039156%2C78.36448463870657%29%3Bout+body%3B HTTP/1.1" 200 4792
+2025-06-14 16:32:50,938 - INFO - Found 50 hospitals
+2025-06-14 16:32:50,938 - INFO - 127.0.0.1 - - [14/Jun/2025 16:32:50] "POST /hospitals HTTP/1.1" 200 -
+2025-06-14 16:36:53,628 - INFO -  * Detected change in 'c:\\Users\\rupes\\Portifolio\\Health Bot\\backend\\server.py', reloading
+2025-06-14 16:36:57,647 - INFO -  * Restarting with stat
+2025-06-14 16:37:11,866 - DEBUG - Creating converter from 3 to 5
+2025-06-14 16:37:14,914 - INFO - Model loading completed
+2025-06-14 16:37:14,952 - WARNING -  * Debugger is active!
+2025-06-14 16:37:14,972 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 16:37:37,217 - INFO - 127.0.0.1 - - [14/Jun/2025 16:37:37] "OPTIONS /predict/disease HTTP/1.1" 200 -
+2025-06-14 16:37:37,583 - INFO - 127.0.0.1 - - [14/Jun/2025 16:37:37] "[35m[1mPOST /predict/disease HTTP/1.1[0m" 500 -
+2025-06-14 16:37:56,566 - INFO - 127.0.0.1 - - [14/Jun/2025 16:37:56] "OPTIONS /predict/heart_disease HTTP/1.1" 200 -
+2025-06-14 16:37:56,819 - INFO - 127.0.0.1 - - [14/Jun/2025 16:37:56] "[31m[1mPOST /predict/heart_disease HTTP/1.1[0m" 400 -
+2025-06-14 16:38:53,865 - INFO - 127.0.0.1 - - [14/Jun/2025 16:38:53] "OPTIONS /hospitals HTTP/1.1" 200 -
+2025-06-14 16:38:54,141 - DEBUG - Starting new HTTPS connection (1): overpass-api.de:443
+2025-06-14 16:38:54,832 - DEBUG - https://overpass-api.de:443 "GET /api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3Bnode%5B%22amenity%22%3D%22hospital%22%5D%28around%3A5000%2C17.450742332010968%2C78.36449499221808%29%3Bout+body%3B HTTP/1.1" 200 4793
+2025-06-14 16:38:54,849 - INFO - Found 5 valid hospitals
+2025-06-14 16:38:54,849 - INFO - 127.0.0.1 - - [14/Jun/2025 16:38:54] "POST /hospitals HTTP/1.1" 200 -
+2025-06-14 16:54:41,515 - INFO -  * Detected change in 'c:\\Users\\rupes\\Portifolio\\Health Bot\\backend\\server.py', reloading
+2025-06-14 16:54:42,861 - INFO -  * Restarting with stat
+2025-06-14 16:54:52,554 - INFO - Loaded XGBoost model from c:\Users\rupes\Portifolio\Health Bot\backend\models\xgb_model_streamlined.pkl
+2025-06-14 16:54:52,558 - INFO - Loaded label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\label_encoder.pkl
+2025-06-14 16:54:52,558 - INFO - Loaded top features from c:\Users\rupes\Portifolio\Health Bot\backend\models\top_features.pkl
+2025-06-14 16:54:52,560 - DEBUG - Creating converter from 3 to 5
+2025-06-14 16:54:52,657 - INFO - Loaded diabetes model from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-14 16:54:52,657 - INFO - Loaded diabetes scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-14 16:54:52,657 - INFO - Loaded diabetes label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-14 16:54:52,729 - INFO - Loaded heart disease model from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-14 16:54:52,731 - INFO - Loaded heart disease scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-14 16:54:52,733 - INFO - Loaded heart disease label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-14 16:54:52,829 - INFO - Loaded mental health model from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-14 16:54:52,829 - INFO - Loaded mental health scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-14 16:54:52,829 - INFO - Loaded mental health label encoders from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-14 16:54:54,590 - INFO - Loaded skin lesion model from c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-14 16:54:54,827 - INFO - Loaded chest x-ray model from c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-14 16:54:54,827 - INFO - Model loading completed
+2025-06-14 16:54:54,842 - WARNING -  * Debugger is active!
+2025-06-14 16:54:54,849 - INFO -  * Debugger PIN: 427-590-719
+2025-06-14 16:55:18,149 - INFO - 127.0.0.1 - - [14/Jun/2025 16:55:18] "OPTIONS /predict/disease HTTP/1.1" 200 -
+2025-06-14 16:55:18,432 - INFO - 127.0.0.1 - - [14/Jun/2025 16:55:18] "[35m[1mPOST /predict/disease HTTP/1.1[0m" 500 -
+2025-06-14 16:56:05,457 - INFO - 127.0.0.1 - - [14/Jun/2025 16:56:05] "OPTIONS /predict/heart_disease HTTP/1.1" 200 -
+2025-06-14 16:56:05,724 - DEBUG - Received heart disease data: {'age': '20', 'blood_pressure': '110', 'smoking': 1, 'bmi': '20', 'chest_pain': 'Typical Angina'}
+2025-06-14 16:56:05,724 - ERROR - Invalid chest_pain value: Typical Angina
+2025-06-14 16:56:05,731 - INFO - 127.0.0.1 - - [14/Jun/2025 16:56:05] "[31m[1mPOST /predict/heart_disease HTTP/1.1[0m" 400 -
+2025-06-14 16:56:15,693 - INFO - 127.0.0.1 - - [14/Jun/2025 16:56:15] "OPTIONS /predict/heart_disease HTTP/1.1" 200 -
+2025-06-14 16:56:15,947 - DEBUG - Received heart disease data: {'age': '20', 'blood_pressure': '110', 'smoking': 1, 'bmi': '20', 'chest_pain': 'Typical Angina'}
+2025-06-14 16:56:15,947 - ERROR - Invalid chest_pain value: Typical Angina
+2025-06-14 16:56:15,947 - INFO - 127.0.0.1 - - [14/Jun/2025 16:56:15] "[31m[1mPOST /predict/heart_disease HTTP/1.1[0m" 400 -
+2025-06-14 16:56:50,241 - INFO - 127.0.0.1 - - [14/Jun/2025 16:56:50] "OPTIONS /predict/mental_health HTTP/1.1" 200 -
+2025-06-14 16:56:50,498 - DEBUG - Received mental health data: {'age': '20', 'sleep_quality': 'Fair', 'mood_frequency': 'Rarely', 'social_activity': 'Moderate', 'mental_health_history': 0}
+2025-06-14 16:56:51,197 - INFO - Mental health prediction: Low, confidence: 5.895880402547859e-15
+2025-06-14 16:56:51,211 - INFO - 127.0.0.1 - - [14/Jun/2025 16:56:51] "POST /predict/mental_health HTTP/1.1" 200 -
+2025-06-14 17:17:07,143 - INFO - 127.0.0.1 - - [14/Jun/2025 17:17:07] "OPTIONS /predict/heart_disease HTTP/1.1" 200 -
+2025-06-14 17:17:07,160 - DEBUG - Received heart disease data: {'age': 21, 'blood_pressure': 110, 'smoking': 0, 'bmi': 20, 'chest_pain': 'Typical Angina'}
+2025-06-14 17:17:07,193 - ERROR - Invalid chest_pain value: Typical Angina
+2025-06-14 17:17:07,210 - INFO - 127.0.0.1 - - [14/Jun/2025 17:17:07] "[31m[1mPOST /predict/heart_disease HTTP/1.1[0m" 400 -

@@ -1,191 +1,126 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { onAuthStateChanged, signOut, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { auth, db } from './firebase';
-import { signOut, onAuthStateChanged } from 'firebase/auth';
-import { doc, getDoc, setDoc, addDoc, collection } from 'firebase/firestore';
-import JournalSection from './components/JournalSection';
+import LoginPage from './components/LoginPage';
+import RegisterPage from './components/RegisterPage';
+import Dashboard from './components/Dashboard';
 import './App.css';
+import './il8n';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [language, setLanguage] = useState('en');
-  const [messageCount, setMessageCount] = useState(0);
-  const [isPremium] = useState(false); // Removed setIsPremium since unused
-  const [showJournal, setShowJournal] = useState(false);
-  const today = new Date().toISOString().split('T')[0];
+  const [isAuthLoading, setIsAuthLoading] = useState(true);
+  const googleProvider = new GoogleAuthProvider();
+  const {i18n} = useTranslation();
 
-  // Firebase Auth State Listener
   useEffect(() => {
+    console.log('App mounted, checking auth state...');
+    if (process.env.NODE_ENV === 'development') {
+      signOut(auth)
+        .then(() => console.log('Auto signed out for development'))
+        .catch((error) => console.error('Auto sign-out failed:', error));
+    }
+
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log('Auth state changed:', currentUser);
       setUser(currentUser);
+      setIsAuthLoading(false);
     });
     return () => unsubscribe();
   }, []);
 
-  // Fetch Message Count from Firestore
-  useEffect(() => {
-    const fetchMessageCount = async () => {
-      if (user) {
-        const userDocRef = doc(db, 'users', user.uid);
-        const userDoc = await getDoc(userDocRef);
-        if (userDoc.exists()) {
-          const data = userDoc.data();
-          setMessageCount(data.messageCount?.[today] || 0);
-        }
-      }
-    };
-    fetchMessageCount();
-  }, [user, today]); // Removed 'db' from dependency array
-
-  // Handle Sending Messages (Text or Voice)
-  const handleSendMessage = async (inputValue, isVoice = false, callback) => {
-    if (!isPremium && messageCount >= 10) {
-      alert('You’ve reached the 10-message daily limit. Upgrade to premium for unlimited access!');
-      return;
-    }
-
-    setIsLoading(true);
+  const handleLogin = async (email, password) => {
     try {
-      const payload = {
-        input_type: isVoice ? 'voice' : 'text',
-        input: inputValue,
-        language: language,
-      };
-      const res = await axios.post('/.netlify/functions/chat', payload);
-      const { transcribed_text, response_text, response_audio } = res.data;
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      throw new Error(error.message || 'Login failed');
+    }
+  };
 
-      if (isVoice) {
-        setMessages((prev) => [
-          ...prev,
-          { sender: 'user', text: transcribed_text },
-          { sender: 'ai', text: response_text },
-        ]);
-        const audio = new Audio(`data:audio/mp3;base64,${response_audio}`);
-        audio.play();
-        if (callback) callback(transcribed_text);
-      } else {
-        setMessages((prev) => [
-          ...prev,
-          { sender: 'user', text: inputValue },
-          { sender: 'ai', text: response_text },
-        ]);
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const newUser = result.user;
+      const userDocRef = doc(db, 'users', newUser.uid);
+      const userDoc = await getDoc(userDocRef);
+      if (!userDoc.exists()) {
+        await setDoc(userDocRef, {
+          email: newUser.email,
+          createdAt: new Date().toISOString(),
+          isPremium: false,
+          messageCount: {},
+        });
       }
+    } catch (error) {
+      throw new Error(error.message || 'Google login failed');
+    }
+  };
 
-      const newCount = messageCount + 1;
-      setMessageCount(newCount);
-      const userDocRef = doc(db, 'users', user.uid);
-      await setDoc(userDocRef, { messageCount: { [today]: newCount } }, { merge: true });
-
-      const sessionMessages = isVoice
-        ? [...messages, { sender: 'user', text: transcribed_text }, { sender: 'ai', text: response_text }]
-        : [...messages, { sender: 'user', text: inputValue }, { sender: 'ai', text: response_text }];
-      await addDoc(collection(db, 'sessions'), {
-        date: new Date().toISOString(),
-        messages: sessionMessages,
-        userId: user.uid,
+  const handleRegister = async (email, password) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const newUser = userCredential.user;
+      await setDoc(doc(db, 'users', newUser.uid), {
+        email,
+        createdAt: new Date().toISOString(),
+        isPremium: false,
+        messageCount: {},
       });
     } catch (error) {
-      console.error('Error in handleSendMessage:', error);
-      setMessages((prev) => [...prev, { sender: 'ai', text: 'Oops, something went wrong.' }]);
-    } finally {
-      setIsLoading(false);
+      throw new Error(error.message || 'Registration failed');
     }
   };
 
-  // Handle Text Input Submission
-  const handleTextSubmit = (e) => {
-    e.preventDefault();
-    if (input.trim()) {
-      handleSendMessage(input);
-      setInput('');
-    }
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
-  // Handle Voice Input (Placeholder)
-  const handleVoiceSubmit = () => {
-    const audioBase64 = "your-audio-base64-data"; // Replace with actual voice logic
-    handleSendMessage(audioBase64, true, (transcribed) => {
-      console.log('Transcribed:', transcribed);
-    });
-  };
-
-  // Handle Journal Entries
-  const handleJournalSubmit = async (entry) => {
-    if (user) {
-      await addDoc(collection(db, 'sessions'), {
-        date: new Date().toISOString(),
-        messages: [{ sender: 'user', text: entry }],
-        userId: user.uid,
-      });
-    }
-  };
-
-  // Logout
-  const handleLogout = () => {
-    signOut(auth);
-  };
+  if (isAuthLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="w-12 h-12 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
-    <div className="App">
-      {user ? (
-        <>
-          <header>
-            <h1>Virtual AI Therapist</h1>
-            <button onClick={handleLogout}>Logout</button>
-            <button onClick={() => setShowJournal(!showJournal)}>
-              {showJournal ? 'Close Journal' : 'Open Journal'}
-            </button>
-          </header>
+    <Router>
 
-          <div className="chat-container">
-            {messages.map((msg, index) => (
-              <div key={index} className={`message ${msg.sender}`}>
-                {msg.text}
-              </div>
-            ))}
-          </div>
-
-          <form onSubmit={handleTextSubmit} className="input-form">
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Type your message..."
-              disabled={isLoading}
-            />
-            <button type="submit" disabled={isLoading}>
-              Send
-            </button>
-            <button type="button" onClick={handleVoiceSubmit} disabled={isLoading}>
-              Voice
-            </button>
-            <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-              <option value="en">English</option>
-              <option value="es">Spanish</option>
-              <option value="fr">French</option>
-            </select>
-          </form>
-
-          {showJournal && (
-            <JournalSection
-              entries={messages.filter((m) => m.sender === 'user')}
-              onJournalSubmit={handleJournalSubmit}
-              onClose={() => setShowJournal(false)}
-              darkMode={false}
-            />
-          )}
-
-          <p>Messages today: {messageCount}/10 {isPremium && '(Premium)'}</p>
-        </>
-      ) : (
-        <div className="login-prompt">
-          <p>Please log in to use the Virtual AI Therapist.</p>
-        </div>
-      )}
-    </div>
+      <Routes>
+        <Route
+          path="/login"
+          element={
+            user ? (
+              <Navigate to="/" />
+            ) : (
+              <LoginPage
+                onLogin={handleLogin}
+                onGoogleLogin={handleGoogleLogin}
+                onSwitchToRegister={() => {}}
+              />
+            )
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            user ? (
+              <Navigate to="/" />
+            ) : (
+              <RegisterPage onRegister={handleRegister} onSwitchToLogin={() => {}} />
+            )
+          }
+        />
+        <Route
+          path="/"
+          element={user ? <Dashboard user={user} /> : <Navigate to="/login" />}
+        />
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </Router>
   );
 }
 
