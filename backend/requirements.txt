@@ -8,7 +8,7 @@ pillow
 requests
 groq
 tensorflow-cpu
-tensorboard# Update to match tensorflow-cpu
+tensorboard # Update to match tensorflow-cpu
 scikit-learn
 firebase-admin==6.5.0
 python-dotenv==1.0.1
