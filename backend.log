@@ -308,3 +308,163 @@ ValueError: could not convert string to float: 'Typical Angina'
 2025-06-14 17:17:07,160 - DEBUG - Received heart disease data: {'age': 21, 'blood_pressure': 110, 'smoking': 0, 'bmi': 20, 'chest_pain': 'Typical Angina'}
 2025-06-14 17:17:07,193 - ERROR - Invalid chest_pain value: Typical Angina
 2025-06-14 17:17:07,210 - INFO - 127.0.0.1 - - [14/Jun/2025 17:17:07] "[31m[1mPOST /predict/heart_disease HTTP/1.1[0m" 400 -
+2025-06-15 13:18:38,728 - INFO - Loaded XGBoost model from c:\Users\rupes\Portifolio\Health Bot\backend\models\xgb_model_streamlined.pkl
+2025-06-15 13:18:38,732 - INFO - Loaded label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\label_encoder.pkl
+2025-06-15 13:18:38,733 - INFO - Loaded top features from c:\Users\rupes\Portifolio\Health Bot\backend\models\top_features.pkl: ['mass_in_breast', 'transaminitis', 'chill', 'orthopnea', 'seizure', 'diarrhea', 'mediastinal_shift', 'flatulence', 'fever', 'suicidal', 'mental_status_changes', 'intoxication', 'uncoordination', 'out_of_breath', 'hematuria', 'moan', 'hypoproteinemia', 'tremor', 'shortness_of_breath', 'dyspnea', 'fall', 'pericardial_friction_rub', 'hot_flush', 'pulsus\xa0paradoxus', 'ecchymosis', 'systolic_murmur', 'hemiplegia', 'wheezing', 'hypokinesia', 'achalasia', 'para_2', 'behavior_showing_increased_motor_activity', 'pain_abdominal', 'unsteady_gait', 'sore_to_touch', 'prostatism', 'hyperkalemia', 'asthenia', 'pleuritic_pain', 'swelling', 'extreme_exhaustion', 'inappropriate_affect', 'pain_chest', 'cyanosis', 'cough', 'haemorrhage', 'dyspnea_on_exertion', 'breakthrough_pain', 'rale', 'ascites', 'nightmare', 'left\xa0atrial\xa0hypertrophy', 'urgency_of\xa0micturition', 'mass_of_body_structure', 'clonus', 'heme_positive', 'speech_slurred', 'loose_associations', 'drowsiness', 'fecaluria', 'feeling_suicidal', 'erythema', 'paresthesia', 'paraparesis', 'energy_increased', 'yellow_sputum', 'worry', 'lesion', 'drool', 'pain', 'unresponsiveness', 'hallucinations_auditory', 'abscess_bacterial', 'dysarthria', 'ambidexterity', 'vomiting', 'polyuria', 'thicken']
+2025-06-15 13:18:38,779 - DEBUG - Creating converter from 3 to 5
+2025-06-15 13:18:39,052 - INFO - Loaded diabetes model from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-15 13:18:39,069 - INFO - Loaded diabetes scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-15 13:18:39,084 - INFO - Loaded diabetes label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-15 13:18:39,218 - INFO - Loaded heart disease model from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-15 13:18:39,220 - INFO - Loaded heart disease scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-15 13:18:39,222 - INFO - Loaded heart disease label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-15 13:18:39,311 - INFO - Loaded mental health model from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-15 13:18:39,325 - INFO - Loaded mental health scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-15 13:18:39,344 - INFO - Loaded mental health label encoders from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-15 13:18:39,345 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-15 13:18:39,346 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-15 13:18:39,346 - INFO - Model loading completed
+2025-06-15 13:18:39,396 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.9:5001
+2025-06-15 13:18:39,397 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 13:18:39,400 - INFO -  * Restarting with stat
+2025-06-15 13:18:45,388 - INFO - Loaded XGBoost model from c:\Users\rupes\Portifolio\Health Bot\backend\models\xgb_model_streamlined.pkl
+2025-06-15 13:18:45,390 - INFO - Loaded label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\label_encoder.pkl
+2025-06-15 13:18:45,391 - INFO - Loaded top features from c:\Users\rupes\Portifolio\Health Bot\backend\models\top_features.pkl: ['mass_in_breast', 'transaminitis', 'chill', 'orthopnea', 'seizure', 'diarrhea', 'mediastinal_shift', 'flatulence', 'fever', 'suicidal', 'mental_status_changes', 'intoxication', 'uncoordination', 'out_of_breath', 'hematuria', 'moan', 'hypoproteinemia', 'tremor', 'shortness_of_breath', 'dyspnea', 'fall', 'pericardial_friction_rub', 'hot_flush', 'pulsus\xa0paradoxus', 'ecchymosis', 'systolic_murmur', 'hemiplegia', 'wheezing', 'hypokinesia', 'achalasia', 'para_2', 'behavior_showing_increased_motor_activity', 'pain_abdominal', 'unsteady_gait', 'sore_to_touch', 'prostatism', 'hyperkalemia', 'asthenia', 'pleuritic_pain', 'swelling', 'extreme_exhaustion', 'inappropriate_affect', 'pain_chest', 'cyanosis', 'cough', 'haemorrhage', 'dyspnea_on_exertion', 'breakthrough_pain', 'rale', 'ascites', 'nightmare', 'left\xa0atrial\xa0hypertrophy', 'urgency_of\xa0micturition', 'mass_of_body_structure', 'clonus', 'heme_positive', 'speech_slurred', 'loose_associations', 'drowsiness', 'fecaluria', 'feeling_suicidal', 'erythema', 'paresthesia', 'paraparesis', 'energy_increased', 'yellow_sputum', 'worry', 'lesion', 'drool', 'pain', 'unresponsiveness', 'hallucinations_auditory', 'abscess_bacterial', 'dysarthria', 'ambidexterity', 'vomiting', 'polyuria', 'thicken']
+2025-06-15 13:18:45,393 - DEBUG - Creating converter from 3 to 5
+2025-06-15 13:18:45,511 - INFO - Loaded diabetes model from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-15 13:18:45,513 - INFO - Loaded diabetes scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-15 13:18:45,513 - INFO - Loaded diabetes label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-15 13:18:45,590 - INFO - Loaded heart disease model from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-15 13:18:45,592 - INFO - Loaded heart disease scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-15 13:18:45,593 - INFO - Loaded heart disease label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-15 13:18:45,659 - INFO - Loaded mental health model from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-15 13:18:45,660 - INFO - Loaded mental health scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-15 13:18:45,661 - INFO - Loaded mental health label encoders from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-15 13:18:45,662 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-15 13:18:45,662 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-15 13:18:45,662 - INFO - Model loading completed
+2025-06-15 13:18:45,673 - WARNING -  * Debugger is active!
+2025-06-15 13:18:45,687 - INFO -  * Debugger PIN: 427-590-719
+2025-06-15 13:20:01,983 - INFO - Loaded XGBoost model from c:\Users\rupes\Portifolio\Health Bot\backend\models\xgb_model_streamlined.pkl
+2025-06-15 13:20:01,986 - INFO - Loaded label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\label_encoder.pkl
+2025-06-15 13:20:01,986 - INFO - Loaded top features from c:\Users\rupes\Portifolio\Health Bot\backend\models\top_features.pkl: ['mass_in_breast', 'transaminitis', 'chill', 'orthopnea', 'seizure', 'diarrhea', 'mediastinal_shift', 'flatulence', 'fever', 'suicidal', 'mental_status_changes', 'intoxication', 'uncoordination', 'out_of_breath', 'hematuria', 'moan', 'hypoproteinemia', 'tremor', 'shortness_of_breath', 'dyspnea', 'fall', 'pericardial_friction_rub', 'hot_flush', 'pulsus\xa0paradoxus', 'ecchymosis', 'systolic_murmur', 'hemiplegia', 'wheezing', 'hypokinesia', 'achalasia', 'para_2', 'behavior_showing_increased_motor_activity', 'pain_abdominal', 'unsteady_gait', 'sore_to_touch', 'prostatism', 'hyperkalemia', 'asthenia', 'pleuritic_pain', 'swelling', 'extreme_exhaustion', 'inappropriate_affect', 'pain_chest', 'cyanosis', 'cough', 'haemorrhage', 'dyspnea_on_exertion', 'breakthrough_pain', 'rale', 'ascites', 'nightmare', 'left\xa0atrial\xa0hypertrophy', 'urgency_of\xa0micturition', 'mass_of_body_structure', 'clonus', 'heme_positive', 'speech_slurred', 'loose_associations', 'drowsiness', 'fecaluria', 'feeling_suicidal', 'erythema', 'paresthesia', 'paraparesis', 'energy_increased', 'yellow_sputum', 'worry', 'lesion', 'drool', 'pain', 'unresponsiveness', 'hallucinations_auditory', 'abscess_bacterial', 'dysarthria', 'ambidexterity', 'vomiting', 'polyuria', 'thicken']
+2025-06-15 13:20:01,988 - DEBUG - Creating converter from 3 to 5
+2025-06-15 13:20:02,114 - INFO - Loaded diabetes model from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-15 13:20:02,115 - INFO - Loaded diabetes scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-15 13:20:02,116 - INFO - Loaded diabetes label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-15 13:20:02,198 - INFO - Loaded heart disease model from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-15 13:20:02,199 - INFO - Loaded heart disease scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-15 13:20:02,199 - INFO - Loaded heart disease label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-15 13:20:02,265 - INFO - Loaded mental health model from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-15 13:20:02,266 - INFO - Loaded mental health scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-15 13:20:02,267 - INFO - Loaded mental health label encoders from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-15 13:20:02,267 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-15 13:20:02,432 - INFO - Loaded chest x-ray model from c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-15 13:20:02,432 - INFO - Model loading completed
+2025-06-15 13:20:02,457 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.9:5001
+2025-06-15 13:20:02,457 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 13:20:02,460 - INFO -  * Restarting with stat
+2025-06-15 13:20:08,558 - INFO - Loaded XGBoost model from c:\Users\rupes\Portifolio\Health Bot\backend\models\xgb_model_streamlined.pkl
+2025-06-15 13:20:08,561 - INFO - Loaded label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\label_encoder.pkl
+2025-06-15 13:20:08,561 - INFO - Loaded top features from c:\Users\rupes\Portifolio\Health Bot\backend\models\top_features.pkl: ['mass_in_breast', 'transaminitis', 'chill', 'orthopnea', 'seizure', 'diarrhea', 'mediastinal_shift', 'flatulence', 'fever', 'suicidal', 'mental_status_changes', 'intoxication', 'uncoordination', 'out_of_breath', 'hematuria', 'moan', 'hypoproteinemia', 'tremor', 'shortness_of_breath', 'dyspnea', 'fall', 'pericardial_friction_rub', 'hot_flush', 'pulsus\xa0paradoxus', 'ecchymosis', 'systolic_murmur', 'hemiplegia', 'wheezing', 'hypokinesia', 'achalasia', 'para_2', 'behavior_showing_increased_motor_activity', 'pain_abdominal', 'unsteady_gait', 'sore_to_touch', 'prostatism', 'hyperkalemia', 'asthenia', 'pleuritic_pain', 'swelling', 'extreme_exhaustion', 'inappropriate_affect', 'pain_chest', 'cyanosis', 'cough', 'haemorrhage', 'dyspnea_on_exertion', 'breakthrough_pain', 'rale', 'ascites', 'nightmare', 'left\xa0atrial\xa0hypertrophy', 'urgency_of\xa0micturition', 'mass_of_body_structure', 'clonus', 'heme_positive', 'speech_slurred', 'loose_associations', 'drowsiness', 'fecaluria', 'feeling_suicidal', 'erythema', 'paresthesia', 'paraparesis', 'energy_increased', 'yellow_sputum', 'worry', 'lesion', 'drool', 'pain', 'unresponsiveness', 'hallucinations_auditory', 'abscess_bacterial', 'dysarthria', 'ambidexterity', 'vomiting', 'polyuria', 'thicken']
+2025-06-15 13:20:08,564 - DEBUG - Creating converter from 3 to 5
+2025-06-15 13:20:08,662 - INFO - Loaded diabetes model from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-15 13:20:08,664 - INFO - Loaded diabetes scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-15 13:20:08,665 - INFO - Loaded diabetes label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-15 13:20:08,738 - INFO - Loaded heart disease model from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-15 13:20:08,740 - INFO - Loaded heart disease scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-15 13:20:08,741 - INFO - Loaded heart disease label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-15 13:20:08,803 - INFO - Loaded mental health model from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-15 13:20:08,804 - INFO - Loaded mental health scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-15 13:20:08,805 - INFO - Loaded mental health label encoders from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-15 13:20:08,806 - WARNING - Missing file: c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-15 13:20:08,960 - INFO - Loaded chest x-ray model from c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-15 13:20:08,960 - INFO - Model loading completed
+2025-06-15 13:20:08,970 - WARNING -  * Debugger is active!
+2025-06-15 13:20:08,974 - INFO -  * Debugger PIN: 427-590-719
+2025-06-15 13:20:47,686 - INFO - Loaded XGBoost model from c:\Users\rupes\Portifolio\Health Bot\backend\models\xgb_model_streamlined.pkl
+2025-06-15 13:20:47,689 - INFO - Loaded label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\label_encoder.pkl
+2025-06-15 13:20:47,689 - INFO - Loaded top features from c:\Users\rupes\Portifolio\Health Bot\backend\models\top_features.pkl: ['mass_in_breast', 'transaminitis', 'chill', 'orthopnea', 'seizure', 'diarrhea', 'mediastinal_shift', 'flatulence', 'fever', 'suicidal', 'mental_status_changes', 'intoxication', 'uncoordination', 'out_of_breath', 'hematuria', 'moan', 'hypoproteinemia', 'tremor', 'shortness_of_breath', 'dyspnea', 'fall', 'pericardial_friction_rub', 'hot_flush', 'pulsus\xa0paradoxus', 'ecchymosis', 'systolic_murmur', 'hemiplegia', 'wheezing', 'hypokinesia', 'achalasia', 'para_2', 'behavior_showing_increased_motor_activity', 'pain_abdominal', 'unsteady_gait', 'sore_to_touch', 'prostatism', 'hyperkalemia', 'asthenia', 'pleuritic_pain', 'swelling', 'extreme_exhaustion', 'inappropriate_affect', 'pain_chest', 'cyanosis', 'cough', 'haemorrhage', 'dyspnea_on_exertion', 'breakthrough_pain', 'rale', 'ascites', 'nightmare', 'left\xa0atrial\xa0hypertrophy', 'urgency_of\xa0micturition', 'mass_of_body_structure', 'clonus', 'heme_positive', 'speech_slurred', 'loose_associations', 'drowsiness', 'fecaluria', 'feeling_suicidal', 'erythema', 'paresthesia', 'paraparesis', 'energy_increased', 'yellow_sputum', 'worry', 'lesion', 'drool', 'pain', 'unresponsiveness', 'hallucinations_auditory', 'abscess_bacterial', 'dysarthria', 'ambidexterity', 'vomiting', 'polyuria', 'thicken']
+2025-06-15 13:20:47,692 - DEBUG - Creating converter from 3 to 5
+2025-06-15 13:20:47,803 - INFO - Loaded diabetes model from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-15 13:20:47,805 - INFO - Loaded diabetes scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-15 13:20:47,806 - INFO - Loaded diabetes label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-15 13:20:47,890 - INFO - Loaded heart disease model from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-15 13:20:47,892 - INFO - Loaded heart disease scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-15 13:20:47,893 - INFO - Loaded heart disease label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-15 13:20:47,953 - INFO - Loaded mental health model from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-15 13:20:47,954 - INFO - Loaded mental health scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-15 13:20:47,956 - INFO - Loaded mental health label encoders from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-15 13:20:49,262 - INFO - Loaded skin lesion model from c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-15 13:20:49,377 - INFO - Loaded chest x-ray model from c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-15 13:20:49,378 - INFO - Model loading completed
+2025-06-15 13:20:49,402 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.9:5001
+2025-06-15 13:20:49,403 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 13:20:49,405 - INFO -  * Restarting with stat
+2025-06-15 13:20:55,142 - INFO - Loaded XGBoost model from c:\Users\rupes\Portifolio\Health Bot\backend\models\xgb_model_streamlined.pkl
+2025-06-15 13:20:55,144 - INFO - Loaded label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\label_encoder.pkl
+2025-06-15 13:20:55,145 - INFO - Loaded top features from c:\Users\rupes\Portifolio\Health Bot\backend\models\top_features.pkl: ['mass_in_breast', 'transaminitis', 'chill', 'orthopnea', 'seizure', 'diarrhea', 'mediastinal_shift', 'flatulence', 'fever', 'suicidal', 'mental_status_changes', 'intoxication', 'uncoordination', 'out_of_breath', 'hematuria', 'moan', 'hypoproteinemia', 'tremor', 'shortness_of_breath', 'dyspnea', 'fall', 'pericardial_friction_rub', 'hot_flush', 'pulsus\xa0paradoxus', 'ecchymosis', 'systolic_murmur', 'hemiplegia', 'wheezing', 'hypokinesia', 'achalasia', 'para_2', 'behavior_showing_increased_motor_activity', 'pain_abdominal', 'unsteady_gait', 'sore_to_touch', 'prostatism', 'hyperkalemia', 'asthenia', 'pleuritic_pain', 'swelling', 'extreme_exhaustion', 'inappropriate_affect', 'pain_chest', 'cyanosis', 'cough', 'haemorrhage', 'dyspnea_on_exertion', 'breakthrough_pain', 'rale', 'ascites', 'nightmare', 'left\xa0atrial\xa0hypertrophy', 'urgency_of\xa0micturition', 'mass_of_body_structure', 'clonus', 'heme_positive', 'speech_slurred', 'loose_associations', 'drowsiness', 'fecaluria', 'feeling_suicidal', 'erythema', 'paresthesia', 'paraparesis', 'energy_increased', 'yellow_sputum', 'worry', 'lesion', 'drool', 'pain', 'unresponsiveness', 'hallucinations_auditory', 'abscess_bacterial', 'dysarthria', 'ambidexterity', 'vomiting', 'polyuria', 'thicken']
+2025-06-15 13:20:55,146 - DEBUG - Creating converter from 3 to 5
+2025-06-15 13:20:55,261 - INFO - Loaded diabetes model from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_best_model.h5
+2025-06-15 13:20:55,262 - INFO - Loaded diabetes scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_scaler.pkl
+2025-06-15 13:20:55,263 - INFO - Loaded diabetes label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\diabetes_label_encoder.pkl
+2025-06-15 13:20:55,341 - INFO - Loaded heart disease model from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_best_model.h5
+2025-06-15 13:20:55,342 - INFO - Loaded heart disease scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_scaler.pkl
+2025-06-15 13:20:55,343 - INFO - Loaded heart disease label encoder from c:\Users\rupes\Portifolio\Health Bot\backend\models\heart_disease_label_encoder.pkl
+2025-06-15 13:20:55,407 - INFO - Loaded mental health model from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_best_model.h5
+2025-06-15 13:20:55,408 - INFO - Loaded mental health scaler from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_scaler.pkl
+2025-06-15 13:20:55,409 - INFO - Loaded mental health label encoders from c:\Users\rupes\Portifolio\Health Bot\backend\models\mental_health_label_encoders.pkl
+2025-06-15 13:20:56,708 - INFO - Loaded skin lesion model from c:\Users\rupes\Portifolio\Health Bot\backend\models\skin_lesion_inceptionv3_model.h5
+2025-06-15 13:20:56,864 - INFO - Loaded chest x-ray model from c:\Users\rupes\Portifolio\Health Bot\backend\models\chest_xray_model.h5
+2025-06-15 13:20:56,865 - INFO - Model loading completed
+2025-06-15 13:20:56,879 - WARNING -  * Debugger is active!
+2025-06-15 13:20:56,884 - INFO -  * Debugger PIN: 427-590-719
+2025-06-15 13:21:37,156 - INFO - 127.0.0.1 - - [15/Jun/2025 13:21:37] "OPTIONS /predict/diabetes HTTP/1.1" 200 -
+2025-06-15 13:21:37,399 - DEBUG - Received diabetes data: {'age': 20, 'bmi': 21, 'skin_thickness': 30, 'glucose': 90, 'physical_activity': 'Moderate'}
+2025-06-15 13:21:37,884 - INFO - Diabetes prediction: Low, confidence: 0.015017886646091938
+2025-06-15 13:21:37,885 - INFO - 127.0.0.1 - - [15/Jun/2025 13:21:37] "POST /predict/diabetes HTTP/1.1" 200 -
+2025-06-15 13:31:51,849 - INFO - 127.0.0.1 - - [15/Jun/2025 13:31:51] "OPTIONS /predict/heart_disease HTTP/1.1" 200 -
+2025-06-15 13:31:52,113 - DEBUG - Received heart disease data: {'age': 20, 'blood_pressure': 135, 'smoking': 0, 'bmi': 27, 'chest_pain': 'Typical Angina'}
+2025-06-15 13:31:52,137 - DEBUG - Input data before scaling:     Age  BloodPressure  Smoking  FamilyHistory   BMI  ChestPain
+0  20.0          135.0      0.0              0  27.0          0
+2025-06-15 13:31:52,141 - DEBUG - Input data after scaling: [[-3.82845721  0.14917694  0.          0.         -0.03460025  0.        ]]
+2025-06-15 13:31:52,423 - INFO - Heart disease prediction: Low, confidence: 0.06490862369537354
+2025-06-15 13:31:52,424 - INFO - 127.0.0.1 - - [15/Jun/2025 13:31:52] "POST /predict/heart_disease HTTP/1.1" 200 -
+2025-06-15 13:32:08,611 - INFO - 127.0.0.1 - - [15/Jun/2025 13:32:08] "OPTIONS /predict/mental_health HTTP/1.1" 200 -
+2025-06-15 13:32:08,874 - DEBUG - Received mental health data: {'age': 21, 'sleep_quality': 'Good', 'mood_frequency': 'Often', 'social_activity': 'Low', 'mental_health_history': 1}
+2025-06-15 13:32:08,973 - INFO - Mental health prediction: High, confidence: 1.0
+2025-06-15 13:32:08,974 - INFO - 127.0.0.1 - - [15/Jun/2025 13:32:08] "POST /predict/mental_health HTTP/1.1" 200 -
+2025-06-15 13:32:18,130 - INFO - 127.0.0.1 - - [15/Jun/2025 13:32:18] "OPTIONS /hospitals HTTP/1.1" 200 -
+2025-06-15 13:32:18,399 - DEBUG - Starting new HTTPS connection (1): overpass-api.de:443
+2025-06-15 13:32:19,075 - DEBUG - https://overpass-api.de:443 "GET /api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3Bnode%5B%22amenity%22%3D%22hospital%22%5D%28around%3A5000%2C17.450796057659698%2C78.36475626399096%29%3Bout+body%3B HTTP/1.1" 200 4693
+2025-06-15 13:32:19,080 - INFO - Found 5 valid hospitals
+2025-06-15 13:32:19,081 - INFO - 127.0.0.1 - - [15/Jun/2025 13:32:19] "POST /hospitals HTTP/1.1" 200 -
+2025-06-15 13:35:10,328 - INFO - 127.0.0.1 - - [15/Jun/2025 13:35:10] "OPTIONS /predict/diabetes HTTP/1.1" 200 -
+2025-06-15 13:35:10,591 - DEBUG - Received diabetes data: {'age': 21, 'bmi': 20, 'skin_thickness': 20, 'glucose': 90, 'physical_activity': 'High'}
+2025-06-15 13:35:10,682 - INFO - Diabetes prediction: Low, confidence: 0.00981622003018856
+2025-06-15 13:35:10,684 - INFO - 127.0.0.1 - - [15/Jun/2025 13:35:10] "POST /predict/diabetes HTTP/1.1" 200 -
+2025-06-15 13:35:33,872 - INFO - 127.0.0.1 - - [15/Jun/2025 13:35:33] "OPTIONS /predict/heart_disease HTTP/1.1" 200 -
+2025-06-15 13:35:34,136 - DEBUG - Received heart disease data: {'age': 21, 'blood_pressure': 135, 'smoking': 0, 'bmi': 27, 'chest_pain': 'Typical Angina'}
+2025-06-15 13:35:34,141 - DEBUG - Input data before scaling:     Age  BloodPressure  Smoking  FamilyHistory   BMI  ChestPain
+0  21.0          135.0      0.0              0  27.0          0
+2025-06-15 13:35:34,144 - DEBUG - Input data after scaling: [[-3.71846235  0.14917694  0.          0.         -0.03460025  0.        ]]
+2025-06-15 13:35:34,226 - INFO - Heart disease prediction: Low, confidence: 0.06425371766090393
+2025-06-15 13:35:34,227 - INFO - 127.0.0.1 - - [15/Jun/2025 13:35:34] "POST /predict/heart_disease HTTP/1.1" 200 -
+2025-06-15 13:35:51,085 - INFO - 127.0.0.1 - - [15/Jun/2025 13:35:51] "OPTIONS /predict/mental_health HTTP/1.1" 200 -
+2025-06-15 13:35:51,329 - DEBUG - Received mental health data: {'age': 21, 'sleep_quality': 'Poor', 'mood_frequency': 'Often', 'social_activity': 'Moderate', 'mental_health_history': 1}
+2025-06-15 13:35:51,406 - INFO - Mental health prediction: High, confidence: 1.0
+2025-06-15 13:35:51,406 - INFO - 127.0.0.1 - - [15/Jun/2025 13:35:51] "POST /predict/mental_health HTTP/1.1" 200 -
+2025-06-15 13:36:02,753 - INFO - 127.0.0.1 - - [15/Jun/2025 13:36:02] "OPTIONS /hospitals HTTP/1.1" 200 -
+2025-06-15 13:36:03,017 - DEBUG - Starting new HTTPS connection (1): overpass-api.de:443
+2025-06-15 13:36:03,650 - DEBUG - https://overpass-api.de:443 "GET /api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3Bnode%5B%22amenity%22%3D%22hospital%22%5D%28around%3A5000%2C17.4948352%2C78.4072704%29%3Bout+body%3B HTTP/1.1" 200 9152
+2025-06-15 13:36:03,654 - INFO - Found 5 valid hospitals
+2025-06-15 13:36:03,655 - INFO - 127.0.0.1 - - [15/Jun/2025 13:36:03] "POST /hospitals HTTP/1.1" 200 -
