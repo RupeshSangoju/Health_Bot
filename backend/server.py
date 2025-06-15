@@ -37,7 +37,7 @@ logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
-GROQ_API_KEY = os.getenv('GROQ_API_KEY')  # Fix: Use GROQ_API_KEY, not REACT_APP_GROQ_API_KEY
+GROQ_API_KEY = os.getenv('REACT_APP_GROQ_API_KEY')  # Fix: Use GROQ_API_KEY, not REACT_APP_GROQ_API_KEY
 if not GROQ_API_KEY:
     logger.error("GROQ_API_KEY not found")
     raise ValueError("GROQ_API_KEY is required")
